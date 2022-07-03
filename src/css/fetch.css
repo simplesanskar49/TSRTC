@@ -1,0 +1,60 @@
+.createUser{
+    margin-top: 0;
+}
+@media screen and (max-width: 798px)
+{
+    
+    .userForm{
+        
+       
+        float: right;
+        position: absolute;
+        bottom: 0;
+        align-self: flex-end;
+        width: 100%;
+        font-family:sans-serif;
+        background-color: white;
+    
+    }
+}
+.userMainForm{
+    /* position: absolute; */
+    /* display: flex; */
+    align-items: center;
+    
+    padding-top: 6%;
+    /* border: red 1px solid; */
+    border-radius: 15px;
+}
+@media screen and (max-width: 1539px){
+.userForm{
+    
+    transform: translateY(-15%);
+    /*float: right;*/
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    width: 100%;
+    font-family:sans-serif;
+    /* grid-column-start: 3;
+    grid-column-end: span end ;
+    grid-row-start: 2;
+    grid-row-end: span 2; */
+
+}
+}
+
+h2{
+    font-weight: bolder;
+}
+
+.userCreateButton{
+    justify-content: center;
+    color: blue;
+    margin-left: 25%;
+}
+Button{
+    width: 25%;
+    /* justify-content: center; */
+    
+}

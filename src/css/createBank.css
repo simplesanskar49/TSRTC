@@ -1,0 +1,55 @@
+.createBank{
+    margin-top: 0;
+}
+@media screen and (max-width: 798px)
+{
+    
+    .bankForm{
+        margin-top: 3%;
+        transform: translateX(20%) translateY(20%);
+        float: right;
+        position: absolute;
+        bottom: 0;
+        align-self: flex-end;
+        width: 100%;
+        font-family:sans-serif;
+        background-color: white;
+    
+    }
+}
+.bankMainForm{
+    
+    padding: 3% 0 1% 1%;
+    border: rgb(197, 197, 197) 1px solid;
+    border-radius: 15px;
+    margin-bottom: 5%;
+    background-color: white;
+}
+@media screen and (max-width: 1539px){
+.bankForm{
+    transform: translateX(37%) translateY(12%);
+    /*float: right;*/
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    width: 70%;
+    font-family:sans-serif;
+    grid-column-start: 3;
+    grid-column-end: span end ;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+
+}
+}
+
+h2{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.bankCreateButton{
+    justify-content: center;
+}
+Button{
+    width: 25%;
+}

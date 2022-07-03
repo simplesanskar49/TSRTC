@@ -1,0 +1,48 @@
+.navbar {
+  /*margin-top: 1%;*/
+  background-color: white;
+  display: flex;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.logout {
+  align-content: space-around;
+  top: 25%;
+  left: 85%;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  color: white;
+  background: rgba(237, 60, 59, 255);
+  transition: ease-in 0.1s;
+  border: none;
+}
+/* 
+.logout:hover {
+  background-color: rgb(75, 106, 198);
+} */
+
+.navbarTitle {
+  padding-bottom: 0;
+  color:rgb(75, 106, 198);
+  font-family: sans-serif;
+  float: left;
+  font-weight: bolder;
+  height: 100%;
+  margin-left: 2%;
+  
+}
+h1{
+  font-family: sans-serif;
+}
+.hide {
+  display: none;
+}
