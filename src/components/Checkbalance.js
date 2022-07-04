@@ -1,22 +1,13 @@
 import React from 'react';
 import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
-import { Nav } from "react-bootstrap";
+
 import "../css/fetch.css";
 import DateTime from "./Datecomponent";
-import BalanceTab from './BalanceTab';
+
 import {
     Form,
-    Input,
-    Button,
-    Radio,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-    Checkbox,
+    Descriptions
   } from "antd";
 import Footer from './Footer';
 
@@ -41,15 +32,30 @@ function Balance(){
             >        
             <h2>Balance</h2>
                 <Form.Item label="Email">
-                    <Input />
+                    <Descriptions.Item label="Email">abc@zaggle.in</Descriptions.Item>
                 </Form.Item>     
                 <Form.Item label="Mobile">
-                    <Input />
+                    <Descriptions.Item label="Mobile">1810000000</Descriptions.Item>
                 </Form.Item>     
                 <Form.Item label="Balance">
-                    <Input />
+                    <Descriptions.Item label="Balance">100000</Descriptions.Item>
                 </Form.Item>
-                
+              
+                <table class="ui celled table">
+                    <thead>
+                        <tr><th>Name</th>
+                        <th>Age</th>
+                        <th>Balance</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr>
+                        <td data-label="Name">James</td>
+                        <td data-label="Age">24</td>
+                        <td data-label="Balance">100000</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
                 </Form>
                 
             </div>
