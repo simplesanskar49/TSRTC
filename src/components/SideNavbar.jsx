@@ -96,8 +96,8 @@ const SideNavbar = () => {
       style={{
         width: 256,
       }}
-      defaultSelectedKeys={['1']}
-      defaultOpenKeys={['sub1']}
+     // defaultSelectedKeys={['1']}
+      //defaultOpenKeys={['sub1']}
       mode="inline"
       items={items}
       
