@@ -5,8 +5,6 @@
 {
     
     .userForm{
-        
-       
         float: right;
         position: absolute;
         bottom: 0;
@@ -20,16 +18,18 @@
 .userMainForm{
     /* position: absolute; */
     /* display: flex; */
-    align-items: center;
+ 
     
-    padding-top: 6%;
+    padding-top: 0%;
+    padding-left: 0%;
+  
     /* border: red 1px solid; */
-    border-radius: 15px;
+    border-radius: 10px;
 }
 @media screen and (max-width: 1539px){
 .userForm{
     
-    transform: translateY(-15%);
+    transform: translateY(+20%);
     /*float: right;*/
     position: absolute;
     bottom: 0;
@@ -56,5 +56,26 @@ h2{
 Button{
     width: 25%;
     /* justify-content: center; */
+    
+}
+
+.form-inline {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+   
+    text-align: center;
+   
+
+}
+
+.C_cx {
+    background-color:#0000FF;
+   
+    height: 3.2rem;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 3px #aaaaaa;
+    font-style:italic;
+  
     
 }

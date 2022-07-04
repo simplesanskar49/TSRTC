@@ -20,7 +20,7 @@
 .userMainForm{
     transform: translateX(60%) translateY(-60%);
     padding: 3% 0 1% 1%;
-    box-shadow: 10px 10px 15px #aaaaaa;
+    box-shadow: 0px 0px 5px #aaa;
     border-radius: 15px;
     margin-top: 5%;
     background-color: white;
