@@ -1,5 +1,6 @@
 .createUser{
     margin-top: 0;
+    
 }
 @media screen and (max-width: 798px)
 {
@@ -46,6 +47,8 @@
 
 h2{
     font-weight: bolder;
+    padding-top: 0%;
+
 }
 
 .userCreateButton{
