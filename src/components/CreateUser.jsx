@@ -18,7 +18,6 @@ const { TextArea } = Input;
 const CreateUser = () => {
   return (
     <div className="createUser">
-
       <div>
         <Navigation status={true} />
       </div>
@@ -33,7 +32,7 @@ const CreateUser = () => {
             wrapperCol={{ span: 12 }}
             layout="horizontal"
           >
-            <h1>Create User</h1>
+            <h1><center>Create User</center></h1>
             <Form.Item label="First Name">
               <Input />
             </Form.Item>
