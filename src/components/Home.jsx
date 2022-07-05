@@ -15,19 +15,13 @@ export class Home extends Component
           <Row>
             <Col span={24}><Navigation /></Col>
           </Row>
-          <br></br>
-          <br></br>
-          <br></br>
-         
-          <br></br>
-          <br></br>
           <Row>
          
             {/* <Col span={12} align='center'><div><NewSlider /></div></Col> */}
             <Col span={12} align="center">
-              <img src={image} alt="image 3" />
-            </Col>
-            <Col span={12} ><div className="login" ><Login /></div></Col>
+              <img style={{width: "140%", height: "120%"}} src={image} alt="image 3" />
+            </Col> 
+            <Col  style={{paddingTop: "80px"}} span={12} ><div className="login" ><Login /></div></Col>
           </Row>
           
         </div>

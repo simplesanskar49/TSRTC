@@ -90,6 +90,7 @@ const SideNavbar = () => {
   };
 
   return (
+    
     <div className='kuchvi'>
     <Menu
       onClick={onClick}

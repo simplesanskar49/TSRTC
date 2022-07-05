@@ -30,7 +30,7 @@ function Fetchbalance() {
         </div>
       
     
-      <div className="userForm"> 
+      <div className="userForm1"> 
       
       <Form
           className="userMainForm"
@@ -38,7 +38,7 @@ function Fetchbalance() {
           wrapperCol={{ span: 14 }}
           layout="horizontal"
         >        
-        <h2>Check Balance</h2>
+        <h1><center>Check Balance</center></h1>
          <Form.Item label="Email">
             <Input />
           </Form.Item>      
@@ -46,7 +46,7 @@ function Fetchbalance() {
             <Input />
           </Form.Item>      
           <Form.Item className="userCreateButton">
-            <Button  a href="CheckBalance">Fetch </Button>
+            <Button type="primary" a href="CheckBalance">Fetch </Button>
           </Form.Item>
         
         </Form>

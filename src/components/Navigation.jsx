@@ -7,7 +7,7 @@ function Navigation (props){
   const navigate = useNavigate();
   return (    
     <nav className="navbar">
-       <h1 className="navbarTitle">Rewards Portal</h1>
+       <h1 className="navbarTitle">Rewards CMS Portal</h1>
     </nav>  
     
   )

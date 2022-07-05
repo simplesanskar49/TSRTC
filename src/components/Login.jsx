@@ -35,7 +35,7 @@ function Login() {
   const [isValid, setIsValid] = useState(false);
   const [isIt, setIsIt] = useState(false);
   const navigate = useNavigate();
-  /*const requestDetails = {
+  const requestDetails = {
     method: "POST",
     headers: {
       Accept: "*",
@@ -44,7 +44,7 @@ function Login() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ loginId: email, password: password }),
-  };*/
+  };
   // var errorClass = "hide";
   // useEffect(() => {
   //   fetch("http://192.168.1.168:8989/prepaid/usermanager/v1/login", {
@@ -105,6 +105,7 @@ function Login() {
       <Form
         name="normal_login"
         className="loginForm"
+
         initialValues={{
           remember: true,
         }}
@@ -156,7 +157,7 @@ function Login() {
        
         <Form.Item>
    <div>
-            <Button type="primary" htmlType="submit" className="loginButton">
+            <Button type="primary" htmlType="submit" className="loginButton" >
             Log in
           </Button>
          </div>
