@@ -110,8 +110,11 @@ function Fetchbalance() {
                 <Col xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
                     <table class="ui inverted blue table">
                         <thead>
-                            <tr align="center"><th colspan='3'><h2 className='efgh'>User Details</h2></th></tr>
-
+                            <tr align="center"><th colspan='3'><h2 className='efgh'>User Details<br /></h2></th></tr>
+                        </thead>
+                        </table>
+                    <table class="ui inverted blue table">
+                        <thead>
                             <tr><th>UserName</th>
                                 <th>Phone</th>
                                 <th>Address</th>

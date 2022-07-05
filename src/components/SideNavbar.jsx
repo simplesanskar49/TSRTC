@@ -27,13 +27,13 @@ const SideNavbar = () => {
     ]),
     getItem('Balance', 'sub1', <BankOutlined/>, [
       getItem('Check Balance', 'g1',<PlusOutlined />),
-      getItem('Redeemed Points', 'g2',<EyeOutlined />),
-      getItem('Redeemed History', 'g3',<EyeOutlined />),
+      // getItem('Redeemed Points', 'g2',<EyeOutlined />),
+      // getItem('Redeemed History', 'g3',<EyeOutlined />),
     ]),
     getItem('Reports', 'sub4', <TransactionOutlined />, [
-      getItem('View Transactions', '9',<EyeOutlined />),
+      getItem('Earned Point History', '9',<EyeOutlined />),
       getItem('Search By Date', '10',<SearchOutlined />),
-      getItem('View/Display History Report', '11', <HistoryOutlined />), 
+      getItem('Burn Point History', '11', <HistoryOutlined />), 
     ]),
     getItem('Audit Trail', 'sub5',<AuditOutlined />, [
       getItem('Search By Date', '12', <SearchOutlined />)

@@ -21,6 +21,10 @@ function Balance() {
                         <table class="ui inverted blue table">
                             <thead>
                                 <tr align="center"><th colspan='3'><h2 className='efgh'>Details</h2></th></tr>
+                            </thead>
+                            </table>
+                            <table class="ui inverted blue table">
+                            <thead>
                                 <tr><th>Email</th>
                                     <th>Phone</th>
                                     <th>Balance</th>
@@ -30,34 +34,10 @@ function Balance() {
                                     <td>8978798824</td>
                                     <td>10000</td>
                                 </tr>
-                                <tr>
-                                    <td>xyz@gmail.com</td>
-                                    <td>8978798824</td>
-                                    <td>10000</td>
-                                </tr>
-                                <tr>
-                                    <td>xyz@gmail.com</td>
-                                    <td>8978798824</td>
-                                    <td>10000</td>
-                                </tr>
-                                <tr>
-                                    <td>xyz@gmail.com</td>
-                                    <td>8978798824</td>
-                                    <td>10000</td>
-                                </tr>
-                                <tr>
-                                    <td>xyz@gmail.com</td>
-                                    <td>8978798824</td>
-                                    <td>10000</td>
-                                </tr>
-                                <tr>
-                                    <td>yyy@gmail.com</td>
-                                    <td>9603428404</td>
-                                    <td>500</td>
-                                </tr>
+                               
                             </tbody>
                         </table> 
-                        <center><Pagination defaultCurrent={1} total={50} /></center>;
+                        {/* <center><Pagination defaultCurrent={1} total={50} /></center>; */}
                     </Col>
                 </Row></div>
 
