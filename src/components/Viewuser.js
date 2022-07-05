@@ -70,19 +70,14 @@ const data = [
 function Fetchbalance() {
 
     return (
-        <div className="createUser">
+        <div>
             <div>
                 <Navigation status={true} />
             </div>
             <Row type="flex" align="top" justify="start">
-                <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                    <SideNavbar />
-                </Col>
-    
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                    
                         <Form
-                            className="userMainForm"
                             labelCol={{ span: 4 }}
                             wrapperCol={{ span: 14 }}
                             layout="horizontal"

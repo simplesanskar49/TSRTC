@@ -62,7 +62,6 @@ const data = [
 function Balance() {
     return (
         <div>
-            <br></br> <br></br> <br></br> <br></br>
         <Row type="flex" align="top" justify="start">
             <Col xs ={24} sm={24} md={6} lg={6} xl={6}>
                 <SideNavbar />
@@ -72,7 +71,6 @@ function Balance() {
                     dataSource={data}
                     columns={columns}
                     />
-
             </Col>
         </Row></div>
 
