@@ -1,21 +1,12 @@
 import React from "react";
 import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
-import { Nav } from "react-bootstrap";
 import "../css/fetch.css";
 
 import {
     Form,
     Input,
     Button,
-    Radio,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-    Checkbox,
   } from "antd";
 import Footer from "./Footer";
 function Fetchbalance() {
@@ -32,7 +23,7 @@ function Fetchbalance() {
     
       <div className="userForm1"> 
       
-      <Form
+     <Form
           className="userMainForm"
           labelCol={{ span: 4 }}
           wrapperCol={{ span: 14 }}
