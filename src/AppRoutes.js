@@ -20,6 +20,7 @@ import Checkbalance from './components/Checkbalance';
 import Viewuser from './components/Viewuser';
 import Updateuser from './components/Updateuser';
 import Fetchbalance from './components/Fetchbalance';
+import Forgotpassword from './components/Forgotpassword';
 
 function AppRoutes() {
   return (
@@ -43,6 +44,7 @@ function AppRoutes() {
             <Route path='/Viewuser' element={<Viewuser />} />
             <Route path='/Updateuser' element={<Updateuser />} />
             <Route path='/home' element={<Logout/>}/>
+            <Route path='/Forgotpassword' element={<Forgotpassword/>}/>
         </Routes> 
     </>
   )

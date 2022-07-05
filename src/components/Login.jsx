@@ -148,7 +148,7 @@ function Login() {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
           <div className="forgotPassword">
-          <a href="">
+          <a href="Forgotpassword">
             Forgot password
           </a>
           </div>
@@ -166,102 +166,6 @@ function Login() {
       </Form>
       </div>
     )
-          // <div className="loginMain centered">
-          //   <div className="loginTitle">Login to your account</div>
-          //   <form className="loginForm">
-          //     <div className="abc">
-          //       <input
-          //         placeholder="Email"
-          //         className="inputFeild"
-          //         value={email}
-          //         onChange={(e) => setEmail(e.target.value)}
-          //       />
-          //     </div>
-          //     <br></br>
-          //     <div className="abc">
-          //       <input
-          //         type="password"
-          //         placeholder="Password"
-          //         value={password}
-          //         onChange={(e) => setPassword(e.target.value)}
-          //       />
-          //     </div>
-          //     <Button
-          //       type="primary"
-          //       className="loginButton"
-          //       onClick= {validate}
-          //       danger
-          //     >
-          //       Login
-          //     </Button>
-          //     <div className="forgotPassword">
-          //       Forgot Password? <a href="#">Reset Password</a>
-          //     </div>
-          //     <div className="hide">
-          //       {isValid && !isIt ? <></> : <h1>Invalid</h1>}
-          //       Invalid Username or Password
-          //     </div>
-          //   </form>
-
-// class NormalLoginForm extends React.Component {
-
-//   render() {
-//     const { getFieldDecorator } = this.props.form;
-//     return (
-//       <Form onSubmit={this.handleSubmit} className="login-form">
-//         <Form.Item>
-//           {getFieldDecorator('username', {
-//             rules: [{ required: true, message: 'Please input your username!' }],
-//           })(
-//             <Input
-//               prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-//               placeholder="Username"
-//             />,
-//           )}
-//         </Form.Item>
-//         <Form.Item>
-//           {getFieldDecorator('password', {
-//             rules: [{ required: true, message: 'Please input your Password!' }],
-//           })(
-//             <Input
-//               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-//               type="password"
-//               placeholder="Password"
-//             />,
-//           )}
-//         </Form.Item>
-//         <Form.Item>
-//           {getFieldDecorator('remember', {
-//             valuePropName: 'checked',
-//             initialValue: true,
-//           })(<Checkbox>Remember me</Checkbox>)}
-//           <a className="login-form-forgot" href="">
-//             Forgot password
-//           </a>
-//           <Button type="primary" htmlType="submit" className="login-form-button">
-//             Log in
-//           </Button>
-//           Or <a href="">register now!</a>
-//         </Form.Item>
-//       </Form>
-//     );
-//   }
-// }
-    
   }
 }
-
 export default Login;
-
-
-
-
-// const App = () => {
-//   const onFinish = (values) => {
-//     console.log('Received values of form: ', values);
-//   };
-
-//   ;
-// };
-
-// export default App;
