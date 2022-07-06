@@ -1,10 +1,9 @@
 import React from 'react';
-import {Row, Col } from 'antd';
+import {Row, Col, Form} from 'antd';
 import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
 import "../css/fetch.css";
 import Footer from './Footer';
-import { Pagination } from 'antd';
 
 function Balance() {
     return (
@@ -18,11 +17,8 @@ function Balance() {
                         <SideNavbar />
                     </Col>
                     <Col xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
-                        <table class="ui inverted blue table">
-                            <thead>
-                                <tr align="center"><th colspan='3'><h2 className='efgh'>Details</h2></th></tr>
-                            </thead>
-                            </table>
+                        <Form className='xyz'>
+                            <h2><center>User details</center></h2>
                             <table class="ui inverted blue table">
                             <thead>
                                 <tr><th>Email</th>
@@ -37,7 +33,7 @@ function Balance() {
                                
                             </tbody>
                         </table> 
-                        {/* <center><Pagination defaultCurrent={1} total={50} /></center>; */}
+                        </Form>
                     </Col>
                 </Row></div>
 
