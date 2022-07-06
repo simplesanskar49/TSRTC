@@ -6,11 +6,10 @@ import "../css/fetch.css";
 import "../components/viewUser.css"
 
 import {
-    Form,
-    Button,
+    
     Col,
-    Descriptions,
-    Row, Table,
+    
+    Row,
 } from "antd";
 import Footer from "./Footer";
 
