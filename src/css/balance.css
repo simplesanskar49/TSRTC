@@ -1,0 +1,28 @@
+.form-inline {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+   
+    text-align: center;
+   
+
+}
+
+.C_cx {
+    background-color:rgb(75, 106, 198);
+    height: 3.2rem;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 3px #aaaaaa;
+    font-style:italic;
+}
+.userMainForm{
+    transform: translateX(60%) translateY(-180%);
+    padding: 3% 0 1% 1%;
+    /*box-shadow: 0px 0px 5px #aaa;*/
+    border-radius: 15px;
+    margin-top: 5%;
+    background-color: white;
+    width: 50%;
+    
+
+}

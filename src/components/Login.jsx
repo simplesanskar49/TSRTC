@@ -29,22 +29,22 @@ function Login() {
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
   };
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isValid, setIsValid] = useState(false);
   const [isIt, setIsIt] = useState(false);
   const navigate = useNavigate();
-  const requestDetails = {
-    method: "POST",
-    headers: {
-      Accept: "*",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ loginId: email, password: password }),
-  };
+  // const requestDetails = {
+  //   method: "POST",
+  //   headers: {
+  //     Accept: "*",
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({ loginId: email, password: password }),
+  // };
   // var errorClass = "hide";
   // useEffect(() => {
   //   fetch("http://192.168.1.168:8989/prepaid/usermanager/v1/login", {
@@ -81,21 +81,21 @@ function Login() {
   //       console.log(rejected);
   //     });
   // }, []);
-  // const validate = (e) => {
-  //   /*e.preventDefault();
+  const validate = (e) => {
+    /*e.preventDefault();
 
-  //   if (isValid) {
-  //     setIsLoggedIn(true);
-  //     console.log(isLoggedIn);
-  //   } else {
-  //     setIsLoggedIn(false);
-  //   }*/
-  //   if (email === "meghana" && password === "1234567890") {
-  //     setIsLoggedIn(true);
-  //   } else {
-  //     setIsLoggedIn(false);
-  //   }
-  // };
+    if (isValid) {
+      setIsLoggedIn(true);
+      console.log(isLoggedIn);
+    } else {
+      setIsLoggedIn(false);
+    }*/
+    if (username == "admin" && password == "admin") {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
   if (isLoggedIn) {
     return navigate("/home");
   } else {
@@ -109,7 +109,7 @@ function Login() {
         initialValues={{
           remember: true,
         }}
-        onFinish={onFinish}
+        onFinish={validate}
       >
         <Form.Item
           name="username"
@@ -119,6 +119,7 @@ function Login() {
               message: 'Please input your Username!',
             },
           ]}
+          onChange={(e) => setUsername(e.target.value)}
         >
           <div className="abc">
           <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
@@ -132,6 +133,7 @@ function Login() {
               message: 'Please input your Password!',
             },
           ]}
+          onChange={(e) => setPassword(e.target.value)}
         >
           <div className="abc">
           <Input
