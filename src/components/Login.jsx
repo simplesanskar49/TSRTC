@@ -90,7 +90,7 @@ function Login() {
     } else {
       setIsLoggedIn(false);
     }*/
-    if (username == "meghana" && password == "1234567890") {
+    if (username == "admin" && password == "admin") {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
