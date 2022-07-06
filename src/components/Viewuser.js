@@ -3,6 +3,7 @@ import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
 import { Pagination } from 'antd';
 import "../css/fetch.css";
+import "../components/viewUser.css"
 
 import {
     Form,
@@ -103,17 +104,25 @@ function Fetchbalance() {
             <div>
                 <Navigation status={true} />
             </div>
+            <div>
             <Row type="flex" align="top" justify="start">
                 <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                     <SideNavbar />
                 </Col>
                 <Col xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
-                    <table class="ui inverted blue table">
-                        <thead>
-                            <tr align="center"><th colspan='3'><h2 className='efgh'>User Details<br /></h2></th></tr>
-                        </thead>
-                        </table>
-                    <table class="ui inverted blue table">
+                    {/*<Form className="xyza">*/}
+                        <br></br>
+                    <table width="100%" border="0" id="maintable">
+                        <tr bgcolor="#1E90FF" width="100%" >
+                            <h1>
+                               <font color="white"> <center>User Details</center></font>
+                            </h1>
+                        </tr>
+                        <tr width="100%"><br></br></tr>
+                        <tr>
+                         <td>
+                        {/*<table class="ui inverted blue table" width="50%">*/}
+                       <table id="customers">
                         <thead>
                             <tr><th>UserName</th>
                                 <th>Phone</th>
@@ -143,10 +152,15 @@ function Fetchbalance() {
                                 <td>banglore</td>
                             </tr>
                         </tbody>
-                    </table>
-                    <center><Pagination defaultCurrent={1} total={50} /></center>;
+                    </table></td></tr></table><br>
+                    </br>
+                    {/*</Form>*/}
+                    <div align="right">
+                    <left><Pagination defaultCurrent={1} total={50} /></left>;
+                    </div>
                 </Col>
             </Row>
+            </div>
             <div>
                 <Footer />
             </div>

@@ -18,7 +18,8 @@ function Balance() {
                     </Col>
                     <Col xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
                         <Form className='xyz'>
-                            <h2><center>User details</center></h2>
+                            <h2 className='abcd'><center>User Details</center></h2>
+                            <hr className='line'></hr>
                             <table class="ui inverted blue table">
                             <thead>
                                 <tr><th>Email</th>

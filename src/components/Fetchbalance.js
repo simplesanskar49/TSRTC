@@ -24,10 +24,9 @@ function Fetchbalance() {
       <div className="userForm1"> 
       
      <Form
-          className="userMainForm"
+          className="form1"
           labelCol={{ span: 4 }}
           wrapperCol={{ span: 14 }}
-          layout="horizontal"
         >        
         <h1><center>Check Balance</center></h1>
          <Form.Item label="Email">
