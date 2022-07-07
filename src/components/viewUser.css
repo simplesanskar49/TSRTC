@@ -11,7 +11,7 @@
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color:  #dfe6ef;}/* #f2f2f2;}*/
 
 #customers tr:hover {background-color: #ddd;}
 
@@ -20,8 +20,10 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #f2f2f2;/*#04AA6D;*/
-  color: blue;
+  font-weight: bold;
+  background-color: #dfe6ef;/*#04AA6D;*/
+  color:  #0872db;
+  text: shadow #2220FF;
 }
 #customers td{
     padding-right: 12px;
@@ -29,7 +31,7 @@
     padding-bottom: 12px;
     text-align: center;
     
-    color: blue;
+    color: #1E90FF;
 }
 
 #maintable {
