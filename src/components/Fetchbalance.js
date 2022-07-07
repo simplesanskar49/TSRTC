@@ -1,17 +1,15 @@
-/*import React, { useState } from "react";*/
 import React from "react";
 import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
-//import { useNavigate } from "react-router-dom";
 import "../css/fetch.css";
-
 import Footer from "./Footer";
-//import { PropertySafetyOutlined } from "@ant-design/icons";
 import {
   Form,
   Input,
   Button,
+  
 } from "antd";
+import axios from "axios";
    
  // var errorClass = "hide";
  var email; // = setEmail;
@@ -25,7 +23,7 @@ function setEmail(val){
 }
 
 function handleSubmit(){
-  alert('Im here');
+  
   
   const requestOptions = {
     method: 'POST',
@@ -34,7 +32,13 @@ function handleSubmit(){
       'email': email,
       'mobileNumber': phone})
 };
-fetch('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOptions)
+
+// const fetchJSON= (async () => {
+//   const response = await fetch('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOption)
+//   return await response.json()
+// })();
+
+//fetch('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOptions)
    // .then(response => response.json())
   //  .then(data => this.setState({ postId: data.id }));
     /*.then((response) => {
@@ -42,20 +46,21 @@ fetch('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOp
       console.log(response);
       //response.set('Access-Control-Allow-Origin':'*');
     })*/
-    .then((response) => {
-      console.log(response.json());
-      if (response.status === "success") {
-       // setIsValid(true);
-        //this.push("/Checkbalance.js")
-        //set class name of error
-        //setIsLoggedIn(true);
+    axios.get(('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance'))
+    .then(async(result) => {
+      console.log(result);
+      console.log(result.json())
+      console.log(result.data);
+      if (result.status === 200) {
+          console.log("recieved");
+          console.log(JSON.stringify(result));
       } else {
-      //  setIsValid(false);
-        //setIsIt(true);
-        //setIsLoggedIn(false);
+          console.log("Not received");
       }
       
     })
+    
+
 
 }
   
@@ -159,7 +164,7 @@ function Fetchbalance() {
             <Input />
           </Form.Item>      
           <Form.Item className="userCreateButton">
-            <Button type="primary"  onClick={handleSubmit} a href="/Checkbalance">Fetch </Button>
+            <Button type="primary"  onClick={handleSubmit} >Fetch </Button>
           </Form.Item>
         
         </Form>
