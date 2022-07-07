@@ -7,7 +7,27 @@ import { Pagination } from 'antd';
 import Footer from './Footer';
 import "../components/viewUser.css";
 
-function Balance() {
+import axios from "axios"
+import { PropertySafetyFilled } from '@ant-design/icons';
+
+
+
+function Balance(email, phone) {
+        // Simple POST request with a JSON body using fetch
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ "email": email, "mobileNumber":phone})
+        };
+        fetch('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOptions)
+            .then(response => response.json())
+            .then(data => this.setState({ email: data.email ,lastUpdateDateTime:data.lastUpdateDateTime}));
+
+
+
+
+    /*console.log(axios.get("http://localhost:8080/usr/RewardsProgram/v1/100010/getBalance"))*/
+
     return (
         <div>
             <div>
@@ -54,9 +74,9 @@ function Balance() {
                                 <th>Balance</th>
                             </tr></thead><tbody>
                             <tr>
-                                <td>xyz@gmail.com</td>
-                                <td>8978767824</td>
-                                <td>9976</td>
+                                <td>props.email</td>
+                                <td>props.phone</td>
+                                <td>props.bal</td>
                             </tr>
                             
                         </tbody>
