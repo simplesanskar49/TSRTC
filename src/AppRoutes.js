@@ -40,7 +40,8 @@ function AppRoutes() {
             <Route path='/reports/history' element={<HistoryReport/>}/>
             <Route path='/audit/searchByDate' element={<SearchAuditByDate/>}/>
             <Route path='/Fetchbalance' element={<Fetchbalance />} />
-            <Route path='/Checkbalance' element={<Checkbalance />} />
+            <Route path='/Checkbalance/' element={<Checkbalance />} />
+            
             <Route path='/Viewuser' element={<Viewuser />} />
             <Route path='/Updateuser' element={<Updateuser />} />
             <Route path='/home' element={<Logout/>}/>

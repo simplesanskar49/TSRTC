@@ -18,13 +18,13 @@ const columns = [
 
     {
       title: 'Mobile Number',
-      dataIndex: 'email',
+      dataIndex: 'mobile',
       key: 'mobileNumber',
       
     },
     {
       title: 'Email Id',
-      dataIndex: 'mobile',
+      dataIndex: 'email',
       key: 'emailId',
     },
     {
@@ -38,7 +38,7 @@ function Fetchbalance() {
     const [users, setUsers] = useState([])
 
     const loadUsers = async () => {
-      const result = await axios.get("http://localhost:8092/usr/RewardsProgram/v1/100010/redeemPoints")
+      const result = await axios.get("http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance")
       setUsers(result.data);
       console.log(result.data);
       //console.log(result.data.amount);
