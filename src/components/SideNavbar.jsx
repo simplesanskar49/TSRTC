@@ -78,7 +78,7 @@ const SideNavbar = () => {
         navigate('/reports/searchByDate');
         break;
       case '11':
-        navigate('/reports/history');
+        navigate('/FetchHistory');
         break;
       case '12':
         navigate('/audit/searchByDate');
