@@ -39,19 +39,6 @@ const columns = [
 
 function Balance() {
   const location = useLocation();
-  
-    // console.log(this.props.location.state.employee);
-    //     // Simple POST request with a JSON body using fetch
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: JSON.stringify({ "email": email, "mobileNumber":phone})
-    //     };
-    //     fetch('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOptions)
-    //         .then(response => response.json())
-    //         .then(data => this.setState({ email: data.email ,lastUpdateDateTime:data.lastUpdateDateTime}));
-
-
     const [users1, setUsers] = useState([]);    
     const users = [];
     const loadUsers = async () => {
