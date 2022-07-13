@@ -20,29 +20,7 @@ function setEmail(val){
  email = val.target.value;
 }
 
-function handleSubmit(){
-  
-  
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({  
-      'email': email,
-      'mobileNumber': phone})
-};
-    axios.get(('http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance', requestOptions))
-    .then(async(result) => {
-      console.log(result);
-      console.log(result.json())
-      console.log(result.data);
-      if (result.status === 200) {
-          console.log("recieved");
-          console.log(JSON.stringify(result));
-      } else {
-          console.log("Not received");
-      }
-    })
-}
+
 function Fetchbalance() {
   
   
@@ -72,7 +50,7 @@ function Fetchbalance() {
             <Input />
           </Form.Item>      
           <Form.Item className="userCreateButton">
-            <Button type="primary"  onClick={handleSubmit} >Fetch </Button>
+            <Button type="primary"  href="Checkbalance">Fetch </Button>
           </Form.Item>
         
         </Form>
@@ -83,5 +61,5 @@ function Fetchbalance() {
         </div>
       </div>
   );
-  }
+}
 export default Fetchbalance;

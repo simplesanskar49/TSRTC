@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col, Form, Button, Descriptions } from 'antd';
+import { Row, Col,Descriptions } from 'antd';
 import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
 import "../css/fetch.css";
 import { useLocation } from 'react-router-dom';
-import { Pagination } from 'antd';
 import Footer from './Footer';
 import "../components/viewUser.css";
 import { Table } from 'antd';
 import axios from "axios"
-import { PropertySafetyFilled } from '@ant-design/icons';
+var bal="";
+var status=""
+var email=""
+var mobile=""
+
 const App = () => (
   <Descriptions title="User Information:-" layout="horizontal">
-    <Descriptions.Item label="Status">Success</Descriptions.Item>
-    <Descriptions.Item label="Email">abc@gmail.com</Descriptions.Item>
-    <Descriptions.Item label="Mobile">9603428404</Descriptions.Item>
-    <Descriptions.Item label="present Balance point">100000</Descriptions.Item>
+    <Descriptions.Item label="Status">{status}</Descriptions.Item>
+    <Descriptions.Item label="Email">{email}</Descriptions.Item>
+    <Descriptions.Item label="Mobile">{mobile}</Descriptions.Item>
+    <Descriptions.Item label="present Balance point">{bal}</Descriptions.Item>
   </Descriptions>
 );
 
@@ -47,12 +50,17 @@ function RewardHistory() {
   const loadUsers = async () => {
 
     const result = await axios.get("http://localhost:8092/usr/RewardsProgram/v1/100010/getReedemHistory");
-    console.log(result.data);
-    console.log(result.data.length());
-    for (var i = 0; i < result.data.length; i++) {
+    
+    bal=result.data[0].balancePoint;
+    email=result.data[0].emailId;
+    status=result.data[0].status;
+    mobile=result.data[0].mobileNumber;
+
+    
+    for (var i = 0; i < result.data[0].historyBeans.length; i++) {
      // if(result.data[i].email === location.state.values.email ){
       {
-        users.push(result.data[i]);
+        users.push(result.data[0].historyBeans[i]);
       }
     }
     setUsers(users);

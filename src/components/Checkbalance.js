@@ -9,7 +9,7 @@ import Footer from './Footer';
 import "../components/viewUser.css";
 import {Table} from 'antd';
 import axios from "axios"
-import { PropertySafetyFilled } from '@ant-design/icons';
+
 
 
 const columns = [
@@ -46,10 +46,10 @@ function Balance() {
       const result = await axios.get("http://localhost:8092/usr/RewardsProgram/v1/100010/getBalance");
       
       for(var i=0;i<result.data.length;i++){        
-        if(result.data[i].email === location.state.values.email ){
+       // if(result.data[i].email === location.state.values.email ){
           
           users.push(result.data[i]);          
-        }
+        
       }      
       setUsers(users);
     }

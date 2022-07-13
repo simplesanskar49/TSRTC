@@ -43,6 +43,7 @@ function Fetchbalance() {
       console.log(result.data);
       //console.log(result.data.amount);
     }
+    
   
     useEffect(() => {
       loadUsers()
