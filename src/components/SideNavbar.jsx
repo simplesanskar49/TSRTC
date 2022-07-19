@@ -14,7 +14,7 @@ function getItem(label, key, icon, children, path) {
     path
   };
 }
-
+var E = "";
 const SideNavbar = () => {
   const navigate=useNavigate();
   const items = [
@@ -43,8 +43,8 @@ const SideNavbar = () => {
     ])
   ];
   const onClick = (e) => {
-
-    console.log(e.key);
+    E = e;
+    console.log(E.key);
 
     switch(e.key){
       case 'g1':
@@ -97,8 +97,9 @@ const SideNavbar = () => {
       style={{
         width: 256,
       }}
-     // defaultSelectedKeys={['1']}
-      //defaultOpenKeys={['sub1']}
+      //defaultSelectedKeys={[E.key]}
+      //defaultOpenKeys={['E']}
+      //selectedKeys={[E.key]}
       mode="inline"
       items={items}
       

@@ -7,6 +7,7 @@ import {Routes, Route} from 'react-router-dom'
 import AdminHome from './components/AdminHome';
 import AppRoutes from './AppRoutes';
 import 'antd/dist/antd.css';
+import reportWebVitals from "./reportWebVitals";
 
 function App() {
   return (
@@ -17,3 +18,4 @@ function App() {
 }
 
 export default App;
+reportWebVitals();
