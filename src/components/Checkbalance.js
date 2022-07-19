@@ -81,11 +81,11 @@ function Balance() {
                         </tr>
                         <tr width="100%"><br></br></tr>
                         <tr>
-                         <td>
+                         <td>     
                         {/*<table class="ui inverted blue table" width="50%">*/}
                        
                     <div> <center>
-                    <Table style={{ height: '250px', width:'90%' }} id="customers" dataSource={users1} columns={columns} /></center>
+                    <Table pagination={false} style={{ height: '250px', width:'90%' }} id="customers" dataSource={users1} columns={columns} /></center>
                     
                     </div>
                     

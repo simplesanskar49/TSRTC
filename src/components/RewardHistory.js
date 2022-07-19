@@ -176,7 +176,7 @@ function RewardHistory() {
             
         </Row>
         
-        <Row type="flex" align="center" justify="start">
+        <Row type="flex" align="center" justify="start" >
           <Col xs={12} sm={12} md={12} lg={12} xl={12} >
             <table style={{ height: '350px', width: '100%' }} border="0" id="maintable">
               <tr bgcolor="#1E90FF" width="100%" >
@@ -222,12 +222,13 @@ function RewardHistory() {
           </Col>
 
         </Row>
-        </div>
+
       </div>
 
       <div className="footerBottom">
         <Footer />
       </div>
+    </div>
     </div>
   );
 }
