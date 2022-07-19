@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col, Descriptions } from 'antd';
+import { Row, Col, Descriptions, Button } from 'antd';
 import SideNavbar from "./SideNavbar";
+
 import Navigation from "./Navigation";
+import { saveAs } from "file-saver";
 import "../css/fetch.css";
 import BarChart from './BarChart';
+import { DownloadOutlined } from '@ant-design/icons';
 import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import "../components/viewUser.css";
@@ -59,6 +62,14 @@ const columns = [
 ];
 
 function RewardHistory() {
+
+  const saveFile = () => {
+    saveAs(
+      "src/components/RewardHistory.js",
+      "RewardHistory.pdf"
+    );
+  };
+
 
   const location = useLocation();
   const [users1, setUsers] = useState([]);
@@ -156,12 +167,12 @@ function RewardHistory() {
         <Navigation status={true} />
       </div>
       <div>
-      <div >
-        <Row type="flex" align="left" justify="start" border="2">
-          <Col xs={24} sm={24} md={6} lg={6} xl={6}  style={{ height: '15px'}}>
-            <SideNavbar />
-          </Col>
-            
+        <div >
+          <Row type="flex" align="left" justify="start" border="2">
+            <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{ height: '15px' }}>
+              <SideNavbar />
+            </Col>
+
             <Col xs={6} sm={6} md={6} lg={6} xl={6} align="right" >
               <App />  </Col>
             <Col xs={12} sm={6} md={6} lg={6} xl={6} align="right">
@@ -173,53 +184,56 @@ function RewardHistory() {
                 </div>
               </div>
             </Col>
-            
-       
-       
-          <Col offset={5} xs={24} sm={24} md={17} lg={17} xl={17} >
-            <div className='my-4'>
-            <table style={{ height: '350px', width: '100%' }} border="0" id="maintable">
-              <tr bgcolor="#1E90FF" width="100%" >
-                <h2>
-                  <font color="white"> <center>Burn Point History</center></font>
-                </h2>
-              </tr>
-              <tr width="100%"><br></br></tr>
-              <tr>
-                <td>
-                  {/*<table class="ui inverted blue table" width="50%">*/}
 
-                  <div> <center>
-                    <Table pagination={false} style={{ height: '300px', width: '90%' }} id="customers" dataSource={users1} columns={columns} /></center>
 
-                  </div>
 
-                  <br />
-                </td></tr></table>
-                </div>
-            <br />
+            <Col offset={5} xs={24} sm={24} md={17} lg={17} xl={17} >
+              <div className='my-4'>
+                <table style={{ height: '350px', width: '100%' }} border="0" id="maintable">
+                  <tr bgcolor="#1E90FF" width="100%" >
+                    <h2>
+                      <font color="white"> <center>Burn Point History</center></font>
+                    </h2>
+                  </tr>
+                  <tr width="100%"><br></br></tr>
+                  <tr>
+                    <td>
+                      {/*<table class="ui inverted blue table" width="50%">*/}
 
-            <br />
-            <div >
-              <div >
-                
-               <center>
-                  <button className='mx-3' type="button">Download</button>
-                  <button type="button">Print</button>
-               </center>
+                      <div> <center>
+                        <Table pagination={false} style={{ height: '300px', width: '90%' }} id="customers" dataSource={users1} columns={columns} /></center>
+
+                      </div>
+
+                      <br />
+                    </td></tr></table>
               </div>
-            </div>
+              <br />
 
-          </Col>
-          </Row>
+              <br />
+              <div >
+                <div >
+
+                  <center>
+                    <Button className='mx-3' onClick={saveFile} download="Resume" type="primary" icon={<DownloadOutlined />}>
+                      Download
+                    </Button>
         
+                    <Button type="primary" icon={<DownloadOutlined />}>Print</Button>
+                  </center>
+                </div>
+              </div>
 
-      </div>
+            </Col>
+          </Row>
 
-      <div className="footerBottom">
-        <Footer />
+
+        </div>
+
+        <div className="footerBottom">
+          <Footer />
+        </div>
       </div>
-    </div>
     </div>
   );
 }
