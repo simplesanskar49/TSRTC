@@ -156,13 +156,13 @@ function RewardHistory() {
         <Navigation status={true} />
       </div>
       <div>
-      <div className='abcd'>
+      <div >
         <Row type="flex" align="left" justify="start" border="2">
-          <Col xs={24} sm={24} md={6} lg={6} xl={6} >
+          <Col xs={24} sm={24} md={6} lg={6} xl={6}  style={{ height: '15px'}}>
             <SideNavbar />
           </Col>
-          
-            <Col xs={6} sm={6} md={6} lg={6} xl={6} align="right">
+            
+            <Col xs={6} sm={6} md={6} lg={6} xl={6} align="right" >
               <App />  </Col>
             <Col xs={12} sm={6} md={6} lg={6} xl={6} align="right">
               <br></br>
@@ -174,10 +174,10 @@ function RewardHistory() {
               </div>
             </Col>
             
-        </Row>
-        
-        <Row type="flex" align="center" justify="start" >
-          <Col xs={12} sm={12} md={12} lg={12} xl={12} >
+       
+       
+          <Col offset={5} xs={24} sm={24} md={17} lg={17} xl={17} >
+            <div className='my-4'>
             <table style={{ height: '350px', width: '100%' }} border="0" id="maintable">
               <tr bgcolor="#1E90FF" width="100%" >
                 <h2>
@@ -196,32 +196,23 @@ function RewardHistory() {
 
                   <br />
                 </td></tr></table>
-
+                </div>
             <br />
 
             <br />
             <div >
               <div >
-                {/* <table>
-                  <tr>
-                    <td> */}
-                <center>
-                  <button type="button">Download</button>
-                </center>
-                {/* </td>
-                    <td> */}
-                <center>
+                
+               <center>
+                  <button className='mx-3' type="button">Download</button>
                   <button type="button">Print</button>
-                </center>
-                {/* </td>
-                  </tr>
-                </table> */}
+               </center>
               </div>
             </div>
 
           </Col>
-
-        </Row>
+          </Row>
+        
 
       </div>
 
