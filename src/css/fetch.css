@@ -1,6 +1,5 @@
 .createUser{
     margin-top: 0;
-    
 }
 @media screen and (max-width: 798px)
 {
@@ -131,6 +130,10 @@ Button{
     
 }
 .userForm1{
-    padding: 6%;
+    padding-top: 6%;
 }
 
+#maintable{
+    position: relative !important;
+    left: 0 !important;
+}

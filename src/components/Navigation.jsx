@@ -8,6 +8,7 @@ function Navigation (props){
   return (    
     <nav className="navbar">
        <h1 className="navbarTitle">Rewards CMS Portal</h1>
+       <DateTime />
     </nav>  
     
   )

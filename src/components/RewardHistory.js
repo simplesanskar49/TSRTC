@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,   useRef } from 'react';
 import { Row, Col, Descriptions, Button } from 'antd';
 import SideNavbar from "./SideNavbar";
-
+import FileDownload from 'js-file-download';
 import Navigation from "./Navigation";
-import { saveAs } from "file-saver";
 import "../css/fetch.css";
-import BarChart from './BarChart';
 import { DownloadOutlined } from '@ant-design/icons';
 import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import "../components/viewUser.css";
 import { Table } from 'antd';
-import axios from "axios";
+import axios, { Axios } from "axios";
 import Chart from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
+
+
 
 var bal = "80000";
 var status = ""
@@ -63,14 +63,16 @@ const columns = [
 
 function RewardHistory() {
 
-  const saveFile = () => {
-    saveAs(
-      "src/components/RewardHistory.js",
-      "RewardHistory.pdf"
-    );
-  };
-
-
+  const download = (e) => {
+    e.preventDefault();
+    axios({
+      url: "/",
+      method: "GET",
+      responseType: "blob",
+    }).then((res) => {
+      FileDownload(res.data, "download.pdf")
+    })
+  }
   const location = useLocation();
   const [users1, setUsers] = useState([]);
   const users = [];
@@ -138,7 +140,7 @@ function RewardHistory() {
       userLost: 234,
     },
   ];
-
+  
   const [userData, setUserData] = useState({
     labels: UserData.map((data) => data.year),
     datasets: [
@@ -172,9 +174,11 @@ function RewardHistory() {
             <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{ height: '15px' }}>
               <SideNavbar />
             </Col>
-
-            <Col xs={6} sm={6} md={6} lg={6} xl={6} align="right" >
-              <App />  </Col>
+            
+            <Col  xs={6} sm={6} md={6} lg={6} xl={6} align="right" >
+              <App />  
+            </Col>
+            
             <Col xs={12} sm={6} md={6} lg={6} xl={6} align="right">
               <br></br>
               <div className="App">
@@ -192,7 +196,7 @@ function RewardHistory() {
                 <table style={{ height: '350px', width: '100%' }} border="0" id="maintable">
                   <tr bgcolor="#1E90FF" width="100%" >
                     <h2>
-                      <font color="white"> <center>Burn Point History</center></font>
+                      <font color="white"> <center>Burn/Reward Point History</center></font>
                     </h2>
                   </tr>
                   <tr width="100%"><br></br></tr>
@@ -215,16 +219,18 @@ function RewardHistory() {
                 <div >
 
                   <center>
-                    <Button className='mx-3' onClick={saveFile} download="Resume" type="primary" icon={<DownloadOutlined />}>
+                    <Button className='mx-3' onClick={(e) => download(e)} type="primary" icon={<DownloadOutlined />}>
                       Download
                     </Button>
-        
                     <Button type="primary" icon={<DownloadOutlined />}>Print</Button>
+                   
+                    
                   </center>
                 </div>
               </div>
 
             </Col>
+          
           </Row>
 
 
