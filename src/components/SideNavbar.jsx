@@ -38,9 +38,9 @@ const SideNavbar = () => {
     getItem('Audit Trail', 'sub5',<AuditOutlined />, [
       getItem('Search By Date', '12', <SearchOutlined />)
     ]),
-    getItem('Logout', 'sub6',<UserOutlined />, [
+    // getItem('Logout', 'sub6',<UserOutlined />, [
       getItem('Logout', '13', <UserOutlined />)
-    ])
+    // ])
   ];
   const onClick = (e) => {
     E = e;
