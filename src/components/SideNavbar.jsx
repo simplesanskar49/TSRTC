@@ -32,7 +32,7 @@ const SideNavbar = () => {
     ]),
     getItem('Reports', 'sub4', <TransactionOutlined />, [
       getItem('Earned Point History', '9',<EyeOutlined />),
-      getItem('Search By Date', '10',<SearchOutlined />),
+      // getItem('Search By Date', '10',<SearchOutlined />),
       getItem('Burn Point History', '11', <HistoryOutlined />), 
     ]),
     getItem('Audit Trail', 'sub5',<AuditOutlined />, [

@@ -66,7 +66,7 @@ function Fetchbalance() {
                 <Col xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
                     {/*<Form className="xyza">*/}
                     <br></br>
-                    <table  style={{ height: '250px' , width:'950px'}}  border="0" id="maintable">
+                    <table  style={{ height: '250px' , width:'800px'}}  border="0" id="maintable">
                         <tr bgcolor="#1E90FF" width="100%" >
                             <h2>
                                <font color="white"> <center>User Details</center></font>

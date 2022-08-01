@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import SideNavbar from "./SideNavbar";
 import Navigation from "./Navigation";
 import Footer from './Footer';
-import { Row, Col, Card, Table, Button } from 'antd';
+import { Row, Col, Card, Table, DatePicker, Button,Space } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 
@@ -10,6 +10,7 @@ import Chart from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
 import axios, { Axios } from "axios";
 
+const { RangePicker } = DatePicker;
 var bal = "80000";
 var status = ""
 var email = ""
@@ -129,7 +130,47 @@ const ViewTransactions = () => {
 
     ],
   });
+  
 
+  const [startDate,setDate]  = useState();
+  const [endDate,setEndDate]  = useState();
+  const dtUsers = [];
+  function searchDate(){
+    // console.log(startDate);
+    // console.log(endDate);
+    var arr = new Array(users1.length);
+    var dtArr = new Array();
+    for(var i=users1.length-1;i>=0;i--){
+      arr[i] = users1[i].dateTime.split(" ");      
+      // var dt = changeType(arr[i][0]);
+      var dt = arr[i][0];
+      // console.log(startDate);
+      // console.log(dt);
+      if(dt >= startDate && dt<= endDate){
+        dtArr.push(dt);
+        //  console.log(dt);
+      }
+      
+    }
+    console.log("length", dtArr.length);
+    for(var i=0;i<dtArr.length;i++){
+      console.log(dtArr[i]);
+      console.log(arr[i][0]);
+      for(var j=0;j<arr.length;j++){
+        if(dtArr[i] === arr[i][0]){
+          dtUsers.push(users1[i]);
+        }
+      }
+    }
+    console.log(dtUsers);
+    
+  }
+  // function changeType(e){
+  //   var ans = e.split('-').reverse().join('-');
+  //   console.log(ans);
+  //   return ans;
+  // }
+  
   return (
     <div>
       <div >
@@ -146,13 +187,13 @@ const ViewTransactions = () => {
             width: '82%', paddingTop: '1%'
           }}>
             <Card bordered={true} style={{ width: '100%', border: '1px solid', }}>
-              <Row gutter={150}>
+              <Row gutter={50}>
                 <Col style={{
-                  width: '40%',
-                  paddingTop: '2%',
+                  width: '50%',
+                  paddingTop: '1%',
                   border: '3px',
                 }}>
-                  <Card title="User Information" style={{ border: '1px solid ' }} bordered={true}>
+                  <Card title="User Information" style={{ border: '1px solid ', height:'100%' }} bordered={true}>
                     <Row>
                       <Col span={10}>
                         Status : {status}
@@ -174,23 +215,33 @@ const ViewTransactions = () => {
                     </Row>
                   </Card>
                 </Col>
-                <Col style={{ paddingTop: '2%' }}>
+                <Col style={{ paddingTop: '1%' }}>
                   <Card bordered={true} style={{
-                    width: 400,
+                    width: 569,
                     border: '1px solid ',
                   }}>
                     <Bar data={userData} />
                   </Card>
                 </Col>
-                <Col style={{ width: '100%', paddingTop: '5%' }}>
+                <Col style={{ width: '100%', paddingTop: '3%' }}>
                   <table style={{ height: '90%', width: '100%' }} border="0" id="maintable">
                     <tr bgcolor="#1E90FF" width="100%" >
                       <h2>
                         <font color="white"> <center>Earned Point History</center></font>
                       </h2>
                     </tr>
-                    <tr width="100%"><br></br></tr>
-                    <tr>
+                   
+                    <tr  className="alignment" width="100%" >
+                      <td >
+                      
+                        <input type="date" className='mx-3' onChange={e=>setDate(e.target.value)}/>
+                        <input type="date"  onChange={e=>setEndDate(e.target.value)}/>
+                        <Button className='mx-3' color='red' onClick={searchDate}>Fetch</Button>
+                      </td>
+                    
+                    </tr>
+                    
+                    <tr>                    
                       <td>
                         {/*<table class="ui inverted blue table" width="50%">*/}
 
