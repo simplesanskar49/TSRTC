@@ -18,8 +18,8 @@
     }
 }   
 .userMainForm{
-    transform: translateX(60%) translateY(-80%);
-    padding: 3% 0 1% 1%;
+    transform: translateX(60%) translateY(-10%);
+    padding-bottom: 3%;
     /*box-shadow: 0px 0px 5px #aaa;*/
     border-radius: 15px;
     margin-top: 5%;
@@ -48,7 +48,7 @@
 h1{
     font-weight: bolder;
     /*color:rgb(75, 106, 198);*/
-    color:#1E90FF;
+    color:#19bc9c;
 }
 
 .userCreateButton{

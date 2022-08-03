@@ -49,14 +49,14 @@ input{
     justify-content: center;
     font-size: 30px;
     font-weight: bold;
-    color:#0000ff;
+    color:#19bc9c;
     margin-bottom: 15%;
 }
 
 
 
 .loginButton{
-    background-color: rgb(75, 106, 198);
+    background-color: #19bc9c;
     width: 100%;
     border: none;
     /* padding: 16px 32px; */
@@ -68,7 +68,7 @@ input{
     margin-bottom: 2%;    
 }
 .loginButton:hover{
-    background-color: rgba(200,60,59,255); ;
+    background-color: #19bc9c ;
 }
 .error{
     padding-top: 5%;

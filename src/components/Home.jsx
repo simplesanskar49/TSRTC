@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import image from "./image3.png";
+import image from "./image3.jpg";
 import NewSlider from "./NewSlider";
 import Login from "./Login";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import "../css/home.css";
+import { Layout, Image, View } from 'antd'
 import { Col, Row } from 'antd';
+const { Header} = Layout;
 export class Home extends Component 
 {
   render() {
@@ -13,7 +15,21 @@ export class Home extends Component
       <div className="home">
         <div>
           <Row>
-            <Col span={24}><Navigation /></Col>
+            <Col span={24}>
+            <Layout>
+                <Header style={{ backgroundColor: "white" }}>
+                <Row>
+                    <Col span={12} offset={9}>
+                        <img
+                                    src="https://static.abhibus.com/ap_tg/ts/oprs-web/_assets/images/new/logo.png"
+                                    alt="LOGO"
+                                    style={{ height: "73px", width: "408px", paddingTop: "10px", paddingBottom: "10px" }}
+                                />
+                    </Col>
+                </Row>
+                </Header>
+                </Layout>
+            </Col>
           </Row>
           <Row>
          

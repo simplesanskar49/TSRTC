@@ -50,10 +50,7 @@ function FetchHistory() {
       <div>
         <Navigation status={true} />
       </div>
-      <div>
-        <SideNavbar />
-      </div>
-
+     
 
       <div className="userForm1">
       <Form  className="form1"

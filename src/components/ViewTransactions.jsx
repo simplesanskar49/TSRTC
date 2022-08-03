@@ -179,10 +179,7 @@ const ViewTransactions = () => {
       <div className="site-card-wrapper">
 
         <Row gutter={10}>
-          <Col >
-            <SideNavbar />
-          </Col>
-
+          
           <Col style={{
             width: '82%', paddingTop: '1%'
           }}>
@@ -255,7 +252,7 @@ const ViewTransactions = () => {
                   </table>
                   <Col style={{paddingTop:'2%'}}>
                     <center>
-                    <Button className='mx-3' onClick={(e) => download(e)} type="primary" icon={<DownloadOutlined />}>
+                    <Button className='mx-3'  type="primary" icon={<DownloadOutlined />}>
                       Download
                     </Button>
                     <Button type="primary" icon={<DownloadOutlined />}>Print</Button>

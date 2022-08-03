@@ -91,16 +91,13 @@ const SideNavbar = () => {
 
   return (
     
-    <div className='kuchvi'>
+    <div >
     <Menu
       onClick={onClick}
-      style={{
-        width: 256,
-      }}
       //defaultSelectedKeys={[E.key]}
       //defaultOpenKeys={['E']}
       //selectedKeys={[E.key]}
-      mode="inline"
+      mode="horizontal"
       items={items}
       
     />

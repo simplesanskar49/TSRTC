@@ -59,11 +59,9 @@ function Fetchbalance() {
                 <Navigation status={true} />
             </div>
             <div>
-            <Row type="flex" align="top" justify="start">
-                <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                    <SideNavbar />
-                </Col>
-                <Col xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
+            <Row >
+                
+                <Col span={24} style={{paddingTop:"2px"}}>
                     {/*<Form className="xyza">*/}
                     <br></br>
                     <table  style={{ height: '250px' , width:'800px'}}  border="0" id="maintable">

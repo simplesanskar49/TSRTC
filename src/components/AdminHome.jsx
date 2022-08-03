@@ -9,8 +9,9 @@ function AdminHome() {
     
     <div className="home">
         <Navigation status={true}/>
-        <SideNavbar />
+        
         <div className="footerBottom">
+          HI 
           <Footer />
         </div>  
     </div>

@@ -5,6 +5,7 @@ import {
   Input,
   Col,
   Radio,
+  Row,
   Button,
   DatePicker,
 } from "antd";
@@ -21,13 +22,10 @@ const CreateUser = () => {
       <div>
         <Navigation status={true} />
       </div>
-      <row type="flex" align="top" justify="start">
-        <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-          <SideNavbar />
-        </Col>
-        <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+      <Row type="flex" align="middle" justify="center">
+        
+        <Col xs={20} sm={20} md={20} lg={20} xl={20}>
           <Form
-            className="userMainForm"
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 12 }}
             layout="horizontal"
@@ -65,7 +63,7 @@ const CreateUser = () => {
         </Col>
 
 
-      </row>
+      </Row>
       <div className="footerBottom">
         <Footer />
       </div>

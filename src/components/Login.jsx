@@ -13,9 +13,7 @@ import { Input, Space } from "antd";
 
 import "antd/dist/antd.css";
 import Footer from "./Footer";
-import Slider from "./slider/Slider";
-import "./slider/Slider.js";
-import NewSlider from "./NewSlider";
+
 
 function Login() {
   const handleSubmit = e => {
@@ -97,7 +95,7 @@ function Login() {
     }
   };
   if (isLoggedIn) {
-    return navigate("/home");
+    return navigate("/fetch-balance");
   } else {
     return (
       <div className="loginMain">
@@ -166,6 +164,9 @@ function Login() {
         </Form.Item>
   
       </Form>
+      <div>
+        <Footer />
+      </div>
       </div>
     )
   }
