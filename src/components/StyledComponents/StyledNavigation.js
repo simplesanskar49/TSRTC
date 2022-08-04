@@ -24,6 +24,15 @@ const StyledNavigation = styled.div`
           }
         }
     }
+    .ftr{
+        align-content: center;
+        // padding-bottom: '0%';
+        // width: '100%';
+        // overflow: 'hidden';
+        // bottom: '0';
+        background-color: #2c3e50;
+        
+    }
 `;
 
 export default StyledNavigation;

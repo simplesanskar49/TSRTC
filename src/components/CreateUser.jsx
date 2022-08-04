@@ -9,8 +9,7 @@ import {
   Button,
   DatePicker,
 } from "antd";
-import SideNavbar from "./SideNavbar";
-import Navigation from "./Navigation";
+import Nav from "./Nav";
 
 import "../css/createUser.css";
 import Footer from "./Footer";
@@ -18,11 +17,11 @@ const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 const CreateUser = () => {
   return (
-    <div className="createUser">
+    <div >
       <div>
-        <Navigation status={true} />
+        <Nav />
       </div>
-      <Row type="flex" align="middle" justify="center">
+      <Row type="flex" align="middle" justify="center" style={{ height: '100vh' }}>
         
         <Col xs={20} sm={20} md={20} lg={20} xl={20}>
           <Form
@@ -64,7 +63,7 @@ const CreateUser = () => {
 
 
       </Row>
-      <div className="footerBottom">
+      <div >
         <Footer />
       </div>
     </div>

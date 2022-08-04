@@ -3,11 +3,13 @@ import zaggle_logo from "./zaggle_logo.png";
 import "../css/footer.css";
 import { Tooltip } from 'antd';
 import { Layout, Image, Col, Row, View } from 'antd'
+import StyledNavigation from './StyledComponents/StyledNavigation';
 const { Header, Footer, Sider, Content } = Layout;
 const Foot = () => {
   return (
     <div>
-            <Footer style={{ align: 'center', paddingBottom: '0%', width: '100%', overflow: 'hidden', bottom: 0, background: '#2c3e50', height: '15%' }}>
+        <StyledNavigation>
+            <Footer className="ftr">
                 <div id="footer">
                     <Row justify="center">
                         <Col justify="center" span={68}>
@@ -24,8 +26,8 @@ const Foot = () => {
                             </div>
                         </Col>
                         <Col justify="center" span={5} offset={3}>
-                            <div className="mid">
-                                <div className="poweredByCSS">
+                            <div >
+                                <div >
                                     Follow us on:
                                 </div>
                                 <div className="fb_image" onClick="window.open('http://www.facebook.com/TSRTCHQ');return false;" title="TSRTC on Facebook">
@@ -51,6 +53,7 @@ const Foot = () => {
                 </div>
 
             </Footer>
+            </StyledNavigation>
         </div>
 
   );
