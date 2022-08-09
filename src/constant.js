@@ -20,6 +20,7 @@ import {
     RewardHistory,
     Nav,
     Logout,
+    Four
   } from './components';
 
 const ROUTE_PATHS = Object.freeze({
@@ -103,6 +104,10 @@ const ROUTE_PATHS = Object.freeze({
         {
             path: PATHS_ROUTES.LOGOUT,
             component: <Logout/>,
+        },
+        {
+            path: PATHS_ROUTES.FOUR,
+            component: <Four />,
         },
     ]
 });

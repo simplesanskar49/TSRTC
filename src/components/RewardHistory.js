@@ -2,7 +2,7 @@ import React, { useEffect, useState,   useRef } from 'react';
 import { Row, Col, Descriptions, Button } from 'antd';
 import SideNavbar from "./SideNavbar";
 import FileDownload from 'js-file-download';
-import Navigation from "./Navigation";
+import Nav from "./Nav";
 import "../css/fetch.css";
 import { DownloadOutlined } from '@ant-design/icons';
 import { useLocation } from 'react-router-dom';
@@ -166,14 +166,11 @@ function RewardHistory() {
   return (
     <div>
       <div>
-        <Navigation status={true} />
+        <Nav />
       </div>
       <div>
         <div >
           <Row type="flex" align="left" justify="start" border="2">
-            <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{ height: '15px' }}>
-              <SideNavbar />
-            </Col>
             
             <Col  xs={6} sm={6} md={6} lg={6} xl={6} align="right" >
               <App />  

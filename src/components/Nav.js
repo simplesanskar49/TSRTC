@@ -24,17 +24,47 @@ function Nav() {
                             <li><Link to="/">Logout</Link></li>
                         </ul>
                     </nav> */}
-                    <NavDropdown title="User" >
-                        <NavDropdown.Item >
-                            <Link to='/create-user'>Create User</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item > 
-                            <Link to='/view-user'>View User</Link>
-                        </NavDropdown.Item>
-                    </NavDropdown>
+                    <Row>
+                        <Col >
+                            <NavDropdown title="User Manager" className="nav-dropdown">
+                                <NavDropdown.Item>
+                                    <Link to='/create-user'>Create User</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item >
+                                    <Link to='/view-user'>View User</Link>
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        </Col>
+                        <Col>
+                            <NavDropdown title="Balance" id="basic-nav-dropdown">
+                                <NavDropdown.Item >
+                                    <Link to='/fetch-balance'>Fetch Balance</Link>
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        </Col>
+                        <Col>
+                            <NavDropdown title="Reports" >
+                                <NavDropdown.Item >
+                                    <Link to='/view-transactions'>Earned Point History</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item >
+                                    <Link to='/reward-history'>Burned Point History</Link>
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        </Col>
+                        <Col>
+
+                            {/* <NavDropdown.Item title="Logout" Link to='/'>
+
+                            </NavDropdown.Item> */}
+                        </Col>
+                    </Row>
                 </Col>
                 <Col xs={24} sm={24} md={8} lg={8} xl={8} style={{ textAlign: 'right' }}>
                     {/* <Button></Button> */}
+                    <Button type="primary" style={{ width: "20%", backgroundColor: "#185e00", color: "white" }}>
+                        <Link to="/"> Logout</Link>
+                    </Button>
                     <DateTime />
                 </Col>
             </Row>

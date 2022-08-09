@@ -33,6 +33,11 @@ const StyledNavigation = styled.div`
         background-color: #2c3e50;
         
     }
+    .nav-dropdown{
+        color: #fff;
+        
+        
+    }
 `;
 
 export default StyledNavigation;

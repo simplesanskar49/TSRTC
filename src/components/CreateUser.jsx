@@ -1,11 +1,12 @@
 import React from "react";
-
+import bg from "./bgImage.webp";
 import {
   Form,
   Input,
   Col,
   Radio,
   Row,
+  Card,
   Button,
   DatePicker,
 } from "antd";
@@ -21,48 +22,58 @@ const CreateUser = () => {
       <div>
         <Nav />
       </div>
-      <Row type="flex" align="middle" justify="center" style={{ height: '100vh' }}>
-        
-        <Col xs={20} sm={20} md={20} lg={20} xl={20}>
-          <Form
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 12 }}
-            layout="horizontal"
-          >
-            <h1><center>Create User</center></h1>
-            <Form.Item label="First Name">
-              <Input />
-            </Form.Item>
 
-            <Form.Item label="Last Name">
-              <Input />
-            </Form.Item>
-            <Form.Item label="PAN">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Gender">
-              <Radio.Group>
-                <Radio value="Male">Male</Radio>
-                <Radio value="Female">Female</Radio>
-                <Radio value="other">Other</Radio>
-              </Radio.Group>
-            </Form.Item>
-            <Form.Item label="Address">
-              <TextArea rows={4} />
-            </Form.Item>
+      <Row type="flex" align="middle" justify="center" style={{
+        height: '100vh', backgroundImage: `url(${bg})`,
 
-            <Form.Item label="Contact Number">
-              <Input type="number" />
-            </Form.Item>
+        backgroundRepeat: "no-repeat",
 
-            <Form.Item className="userCreateButton">
-              <Button type="primary">Create</Button>
-            </Form.Item>
-          </Form>
+        backgroundSize: "cover"
+      }}>
+
+        <Col xs={20} sm={20} md={20} lg={20} xl={20} >
+          <Card bordered={true} style={{ boxShadow: "0px 0px 2px 1px", width: '70%', }}>
+            <Form
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 12 }}
+              layout="horizontal"
+            >
+              <h1><center>Create User</center></h1>
+              <Form.Item label="First Name">
+                <Input />
+              </Form.Item>
+
+              <Form.Item label="Last Name">
+                <Input />
+              </Form.Item>
+              <Form.Item label="PAN">
+                <Input />
+              </Form.Item>
+              <Form.Item label="Gender">
+                <Radio.Group>
+                  <Radio value="Male">Male</Radio>
+                  <Radio value="Female">Female</Radio>
+                  <Radio value="other">Other</Radio>
+                </Radio.Group>
+              </Form.Item>
+              <Form.Item label="Address">
+                <TextArea rows={4} />
+              </Form.Item>
+
+              <Form.Item label="Contact Number">
+                <Input type="number" />
+              </Form.Item>
+
+              <Form.Item className="userCreateButton">
+                <Button type="primary">Create</Button>
+              </Form.Item>
+            </Form>
+          </Card>
         </Col>
 
 
       </Row>
+
       <div >
         <Footer />
       </div>

@@ -42,9 +42,7 @@ export class Home extends Component
           
         </div>
         <div className="home">
-        <Row>
-      <Footer />
-        </Row>
+       
         </div>
         </div>
  );

@@ -13,13 +13,14 @@ const PATHS_ROUTES = {
     FETCH_HISTORY: '/fetch-history',
     SEARCH_AUDIT_BY_DATE: '/search-audit-by-date',
     LOGIN: '/login',
-    CHECKBALANCE: '/check-balance',
+    CHECK_BALANCE: '/check-balance',
     VIEW_USER: '/view-user',
     UPDATE_USER: '/update-user',
     FORGOT_PASSWORD: '/forgot-password',
     REWARD_HISTORY: '/reward-history',
     NAV: '/nav',
     LOGOUT: '/logout',
+    FOUR: '/four',
 
 };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import SideNavbar from "./SideNavbar";
-import Navigation from "./Navigation";
+import Nav from "./Nav";
 import Footer from './Footer';
 import { Row, Col, Card, Table, DatePicker, Button,Space } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
@@ -174,16 +174,16 @@ const ViewTransactions = () => {
   return (
     <div>
       <div >
-        <Navigation status={true} />
+        <Nav />
       </div>
       <div className="site-card-wrapper">
 
-        <Row gutter={10}>
+        <Row type="flex" align="middle" justify="center" style={{ paddingBottom:'15px'}}>
           
           <Col style={{
             width: '82%', paddingTop: '1%'
           }}>
-            <Card bordered={true} style={{ width: '100%', border: '1px solid', }}>
+            <Card bordered={true} style={{ boxShadow: "0px 0px 2px 1px",width: '100%', border: '1px solid', }}>
               <Row gutter={50}>
                 <Col style={{
                   width: '50%',
@@ -212,7 +212,7 @@ const ViewTransactions = () => {
                     </Row>
                   </Card>
                 </Col>
-                <Col style={{ paddingTop: '1%' }}>
+                <Col style={{ paddingTop: '1%' , }}>
                   <Card bordered={true} style={{
                     width: 569,
                     border: '1px solid ',
@@ -221,7 +221,7 @@ const ViewTransactions = () => {
                   </Card>
                 </Col>
                 <Col style={{ width: '100%', paddingTop: '3%' }}>
-                  <table style={{ height: '90%', width: '100%' }} border="0" id="maintable">
+                  <table style={{  height: '90%', width: '100%' }} border="0" id="maintable">
                     <tr bgcolor="#1E90FF" width="100%" >
                       <h2>
                         <font color="white"> <center>Earned Point History</center></font>
@@ -230,10 +230,10 @@ const ViewTransactions = () => {
                    
                     <tr  className="alignment" width="100%" >
                       <td >
-                      
+{/*                       
                         <input type="date" className='mx-3' onChange={e=>setDate(e.target.value)}/>
-                        <input type="date"  onChange={e=>setEndDate(e.target.value)}/>
-                        <Button className='mx-3' color='red' onClick={searchDate}>Fetch</Button>
+                        <input type="date"  onChange={e=>setEndDate(e.target.value)}/> */}
+                        {/* <Button className='mx-3' color='red' onClick={searchDate}>Fetch</Button> */}
                       </td>
                     
                     </tr>

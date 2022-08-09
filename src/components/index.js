@@ -19,6 +19,7 @@ import Forgotpassword from './Forgotpassword';
 import RewardHistory from './RewardHistory';
 import Login from './Login';
 import Nav from './Nav';
+import Four from './New_Design/Four';
 export {
     AdminHome,
     Checkbalance,
@@ -39,4 +40,5 @@ export {
     RewardHistory,
     Nav,
     Logout,
+    Four,
 };

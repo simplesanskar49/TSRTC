@@ -12,7 +12,7 @@ function AdminHome() {
         
         <div className="footerBottom">
           HI 
-          <Footer />
+          
         </div>  
     </div>
   )

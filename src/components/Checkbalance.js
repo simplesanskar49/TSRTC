@@ -1,7 +1,7 @@
 import React,{useEffect,useState}from 'react';
 import {Row, Col, Form,Button} from 'antd';
 import SideNavbar from "./SideNavbar";
-import Navigation from "./Navigation";
+import Nav from './Nav';
 import "../css/fetch.css";
 import {useLocation} from 'react-router-dom';
 import { Pagination } from 'antd';
@@ -64,16 +64,11 @@ function Balance() {
     return (
         <div>
             <div>
-                <Navigation status={true} />
+                <Nav />
             </div>
             <div>
-                <Row type="flex" align="top" justify="start">
-                    <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                        <SideNavbar />
-                    </Col>
-                 
-                    <Col offset={0} xs={24} sm={24} md={17} lg={17} xl={17} className='abcd'>
-                    <br></br>
+            <Row type="flex" align="middle" justify="center" style={{ height: '100vh' }}>
+            <Col xs={20} sm={20} md={20} lg={20} xl={20} >                    
                     <table   style={{ height: '250px' }}  border="0" id="maintable">
                         <tr bgcolor="#1E90FF" width="100%" >
                             <h2>
@@ -97,7 +92,7 @@ function Balance() {
                    
                 </Row></div>
 
-            <div className="footerBottom">
+            <div >
                 <Footer />
             </div>
         </div>
